@@ -11,6 +11,7 @@ public class Student {
 
 	//@NotEmpty(message="please provide userName")
 	@Size(min=2,max=30)
+	@IsValidName(listofValidNames = "Aritra|Sam|Trevor")
 	private String studentName;
 
 	private String studentRoll;

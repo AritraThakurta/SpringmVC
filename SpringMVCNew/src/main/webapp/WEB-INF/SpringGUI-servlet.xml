@@ -23,6 +23,11 @@
 		</property>
 	</bean>
 	
+	<bean id="messageSource" class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+		<property name="basename" value="/WEB-INF/studentmessages"/>
+	</bean>
+	
+	
 	<mvc:annotation-driven />
 
 	
