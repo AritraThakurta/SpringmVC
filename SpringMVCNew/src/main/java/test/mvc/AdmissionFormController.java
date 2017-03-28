@@ -1,5 +1,7 @@
 package test.mvc;
 
+import javax.validation.Valid;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -26,7 +28,7 @@ public class AdmissionFormController {
 	}
 	
 	@RequestMapping(value="/submitAdmissionForm",method=RequestMethod.POST)
-	public ModelAndView submitAdmissionForm(@ModelAttribute("student") Student student,BindingResult result){
+	public ModelAndView submitAdmissionForm(@Valid @ModelAttribute("student") Student student,BindingResult result){
 
 		if(result.hasErrors()){
 			ModelAndView mv1 = new ModelAndView("admissionForm");

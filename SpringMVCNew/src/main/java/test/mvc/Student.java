@@ -3,8 +3,14 @@ package test.mvc;
 import java.util.Date;
 import java.util.List;
 
+import javax.validation.constraints.Size;
+
+import org.hibernate.validator.constraints.NotEmpty;
+
 public class Student {
 
+	//@NotEmpty(message="please provide userName")
+	@Size(min=2,max=30)
 	private String studentName;
 
 	private String studentRoll;
